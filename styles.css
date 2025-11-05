@@ -1,1 +1,141 @@
-/*  your css code here. If applicable */
+
+  :root{
+    --bg:#cfd6cd;           /* page background (soft sage like preview) */
+    --panel:#bcc5bb;        /* inner panel tone */
+    --border:#9aa49a;
+    --text:#222;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color:var(--text);
+    background:var(--bg);
+  }
+  .page{
+    max-width:900px;
+    margin:18px auto 40px;
+    padding:0 12px;
+  }
+
+  /* header label */
+  .label{
+    font-size:26px;
+    font-weight:600;
+    margin:0 0 8px 4px;
+  }
+
+  /* hero image */
+  .hero{
+    background:#e9ece9;
+    border:3px solid var(--border);
+    padding:8px;
+  }
+  .hero img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    max-height:360px;
+  }
+
+  /* grid panel */
+  .panel{
+    margin-top:18px;
+    background:var(--panel);
+    border:3px solid var(--border);
+    padding:8px;
+  }
+  .grid{
+    display:grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap:8px;
+  }
+  .cell{
+    background:#d2d9d0;
+    border:2px solid var(--border);
+    min-height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px;
+  }
+  .cell.image{
+    padding:0;
+  }
+  .cell.image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  /* center list block (Unit #5 list) */
+  .unit{
+    text-align:center;
+    line-height:1.5;
+    font-size:18px;
+    padding:20px 10px;
+  }
+  .unit .title{
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .unit .list{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .unit .list li::marker{content:""}
+
+  /* second row: left caption card */
+  .card{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:10px;
+    padding:12px;
+    align-items:start;
+    font-size:14px;
+  }
+  .card img{
+    width:100%;
+    height:auto;
+    border:2px solid var(--border);
+  }
+  .card .caption{
+    font-weight:700;
+    margin-bottom:4px;
+  }
+  .card a{
+    color:#1a59c4;
+    text-decoration:underline;
+  }
+
+  /* objective block (center second row) */
+  .objective{
+    background:#d2d9d0;
+    padding:16px 18px;
+    border:2px solid var(--border);
+  }
+  .objective h3{
+    text-align:center;
+    margin:6px 0 12px;
+    font-size:20px;
+    font-weight:800;
+  }
+  .objective p{
+    margin:0;
+    font-size:15px;
+    line-height:1.35;
+    text-align:justify;
+  }
+
+  /* right card second row */
+  .card.small{
+    grid-template-columns:120px 1fr;
+  }
+
+  @media (max-width:820px){
+    .grid{ grid-template-columns: 1fr; }
+    .unit{ font-size:17px }
+  }
