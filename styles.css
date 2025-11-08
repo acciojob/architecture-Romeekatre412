@@ -1,7 +1,6 @@
-
-  :root{
-    --bg:#cfd6cd;           /* page background (soft sage like preview) */
-    --panel:#bcc5bb;        /* inner panel tone */
+:root{
+    --bg:#cfd6cd;          
+    --panel:#bcc5bb;      
     --border:#9aa49a;
     --text:#222;
   }
