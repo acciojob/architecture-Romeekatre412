@@ -1,3 +1,6 @@
+body{
+	width:1100px;
+}
 :root{
     --bg:#cfd6cd;          
     --panel:#bcc5bb;      
